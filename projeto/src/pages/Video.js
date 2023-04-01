@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react'
 import "./Video.css"
 import VideoFooter from './components/footer/VideoFooter'
+import VideoSidebar from "./components/sidebar/VideoSidebar"
 
-function Video() {
+function Video({likes, messages, shares, name, description, music, url}) {
 
     const videoRef = useRef(null)
     const [play, setPlay] = useState(false)
@@ -28,12 +29,20 @@ function Video() {
         ref={videoRef}
         onClick={handdleStart}
         loop
-        src='https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4'
+        src={url}
         >
         
         </video>
-        {/*  Sid bar */}
-        <VideoFooter/>
+        <VideoSidebar
+        likes={likes}
+        messages={messages}
+        shares={shares}
+        />
+        <VideoFooter
+        name={name}
+        description={description}
+        music={music}
+        />
     </div>
   )
 }

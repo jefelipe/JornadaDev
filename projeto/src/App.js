@@ -5,8 +5,28 @@ function App() {
   return (
     <div className="App">
       <div className='app__videos'>
-        <Video />
-        <Video />
+        <Video 
+         likes={111}
+         messages={222}
+         shares={333}
+         name="Paulo"
+         description="Bracker o goleiro"
+         music="Musica épica"
+         url="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4"
+
+        />
+         <Video 
+         likes={444}
+         messages={555}
+         shares={666}
+         name="Jean"
+         description="Gato Pulando"
+         music="Guns´N Roses"
+         url="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/brecker2.mp4"
+
+        />
+
+        
       </div>
     </div>
   );
