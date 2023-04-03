@@ -1,5 +1,5 @@
 html{
-  croll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 .App{
@@ -24,4 +24,12 @@ html{
 
 .app__videos::-webkit-scrollbar{
   display: none;
+}
+
+@media only screen and (max-width: 440px){
+  .app__videos{
+    width: 100%;
+    height: 100vh;
+  }
+
 }
