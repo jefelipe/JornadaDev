@@ -7,7 +7,7 @@ import { collection, getDocs } from 'firebase/firestore/lite';
 function App() {
 
   const [video, setVideo] = useState([]);
-
+  
   async function getVideos() {
     const videosCollection = collection(db, "videos");
     const videosSnapshot = await getDocs(videosCollection);
